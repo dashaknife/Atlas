@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import AuthorizationPage from "./components/AuthorizationPage";
 import reportWebVitals from './reportWebVitals';
+import {ThemeProvider} from '@material-ui/core/styles';
+import theme from "./theme";
+import RegistrationPage from "./components/RegistrationPage";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ThemeProvider theme={theme}>
+        <RegistrationPage />
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
