@@ -1,13 +1,5 @@
-/*
- * Copyright (c) 2020. This code created and belongs to Atlas render manager project.
- * Owner and project architect: Danil Andreev | danssg08@gmail.com |  https://github.com/DanilAndreev
- * Project: atlas-monitor
- * File last modified: 12.11.2020, 14:01
- * All rights reserved.
- */
-
 import {createMuiTheme} from "@material-ui/core/styles";
-import {blueGrey, grey, lightBlue} from "@material-ui/core/colors";
+import {blueGrey, deepOrange, green, grey, lightBlue} from "@material-ui/core/colors";
 
 declare module "@material-ui/core/styles/createPalette" {
     interface Palette {
@@ -15,6 +7,12 @@ declare module "@material-ui/core/styles/createPalette" {
         baseColors: Palette["primary"];
         baseLightColors: Palette["primary"];
         baseDarkColors: Palette["primary"];
+        status: {
+            blue: string,
+            orange: string,
+            green: string,
+            grey: string
+        };
     }
 
     interface PaletteOptions {
@@ -22,6 +20,12 @@ declare module "@material-ui/core/styles/createPalette" {
         baseColors: PaletteOptions["primary"];
         baseLightColors: PaletteOptions["primary"];
         baseDarkColors: PaletteOptions["primary"];
+        status: {
+            blue: string,
+            orange: string,
+            green: string,
+            grey: string
+        };
     }
 }
 
@@ -50,6 +54,13 @@ export default createMuiTheme({
         },
         primary: {
             main: lightBlue[400],
+        },
+        status: {
+            blue: lightBlue[500],
+            orange: deepOrange[600],
+            green: green[500],
+            grey: grey[700],
         }
     },
+
 });
